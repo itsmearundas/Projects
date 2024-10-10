@@ -1,0 +1,150 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block content %}
+
+<!-- REGISTRATION -->
+
+<style>
+
+    /* Reset some default styles */
+    
+    
+    body, h1, h2, h3, p {
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Set a background color and font for the body */
+      body {
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+      }
+      
+    
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+    
+    
+    
+      /* Style the signup section */
+      .signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* Style the container for the signup form */
+      .containerforsignup {
+        background-color: #e4ef49;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+      }
+      
+      /* Style the signup form header */
+      #sf {
+        margin-top: 25px;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      /* Style the form elements */
+      .form1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 75px;
+        margin-left: 100px;
+      }
+      
+      .form1 input[type="text"],
+      .form1 input[type="email"],
+      .form1 input[type="password"],
+      .form1 input[type="number"] 
+      {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      
+      /* Style the signup button */
+      #signup {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      #signup:hover {
+        background-color: #ff0d00;
+     
+      }
+      
+      /* Style the login and home links */
+      .lgn {
+        margin-top: 20px;
+        text-align: center;
+      }
+      
+      #login,
+      #backhome {
+        text-decoration: none;
+        color: #007BFF;
+        margin: 0 10px;
+        font-size: 16px;
+      }
+      
+      #login:hover,
+      #backhome:hover {
+        text-decoration: underline;
+        color: black;
+    
+      }
+      
+    
+    </style>
+    
+    
+        <section class="signup">
+            <div class="containerforsignup">
+                <h1 id="sf">SIGNUP FORM</h1>
+               
+                  <div class="form1">
+                    <form   method="POST">
+                      {% csrf_token %}
+                        <div class="name_btn"> NAME   <input required type="text" name="name" id="name" placeholder="NAME">
+                        </div>
+                        <div class="mail_btn"> E-MAIL<input required type="email" name="email" id="email" placeholder="Email Adress">
+                        </div>
+                        <div class="name_btn"> PH NO <input required type="number" name="phno" id="name" placeholder="Phone Number">
+                        </div>
+                      
+                        <div class="pass_btn">  PASSWORD <input required type="password" name="password" id="password" placeholder="Pasword">
+                        </div>
+                      
+                           
+                                                 
+                        <div class="sgn">  <input id="signup" type="submit" value="SignUp">
+                        </div>
+                    </form>    
+                  </div>
+                <div class="lgn">
+                    <a href="adminlogin.html" id="login">Log In</a>
+                    <a href="../index.html" id="backhome">HOME</a>
+                </div>
+            </div>
+        </section>
+    
+
+{% endblock %}
