@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminstyle/adminlogin.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <section class="login">
+                <div class="container">
+                    <center>
+                            <h1 id="lform">LOGIN FORM</h1>
+                        
+                            <div class="form1">
+                                            <form  action="admindb/login_process.php" method="post">
+                                                <input required type="email" name="email" id="email" placeholder="Email Adress"><br><br>
+                                                <input required type="password" name="password" id="pass" placeholder="Pasword"><br><br>
+                                                
+                                                <button class="slogin" type="submit" name="LogIn" id="slogin">LOGIN</button>
+                                               <br><br>
+                                            </form>      
+                            </div>   
+                            
+
+                                <div class="sf">
+                                   
+                                    <button  class="signup" id="bth" onclick="window.location.href='adminsignup.html';">SIGNUP</button>
+                                    
+                                    <button  class="fpass" id="bth" onclick="window.location.href='adminrp.html';">FORGOT ?</button>
+                                 </div>     
+                            <div class="backtohomeforl">
+                                <button  class="backtohomefor" id="bth" onclick="window.location.href='../index.html';">HOME</button>
+
+                            </div>
+                        </center>        
+                </div>
+    </section>
+</body>
+</html>
