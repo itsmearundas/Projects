@@ -1,0 +1,87 @@
+
+
+ /*----------admin table-------*/
+
+ CREATE TABLE admin(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+/*------teachers table---------*/
+
+CREATE TABLE teachers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(255) NOT NULL,
+    phno VARCHAR(20) NOT NULL,  
+    email VARCHAR(255) NOT NULL,
+    gender VARCHAR(255) NOT NULL,
+    dob VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+/*-----adding department and subjects------*/
+
+
+CREATE TABLE departments (
+    department_id INT AUTO_INCREMENT PRIMARY KEY,
+    department_name VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE subjects (
+    subject_id INT AUTO_INCREMENT PRIMARY KEY,
+    department_id INT NOT NULL,
+    subject_name VARCHAR(255) NOT NULL,
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+
+CREATE TABLE selectedsubanddept (
+    selection_id INT AUTO_INCREMENT PRIMARY KEY,
+    teacher_id INT NOT NULL,
+    department_id INT NOT NULL,
+    subject_id INT NOT NULL,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id),
+    FOREIGN KEY (department_id) REFERENCES departments(department_id),
+    FOREIGN KEY (subject_id) REFERENCES subjects(subject_id)
+);
+
+
+
+
+CREATE TABLE timetable_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    selection_id INT NOT NULL ,
+    teacher_id INT NOT NULL,
+    teacher_name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    which VARCHAR(255) NOT NULL,
+    time_slot VARCHAR(255) NOT NULL,
+    date VARCHAR(255) NOT NULL,
+    selected_month VARCHAR(255) NOT NULL,
+    day_of_week VARCHAR(100) NOT NULL,
+    year VARCHAR(255) NOT NULL,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id),
+    FOREIGN KEY (selection_id) REFERENCES selectedsubanddept(id)
+);
+
+
+CREATE TABLE tablereport (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    teacher_id INT NOT NULL,
+    teacher_name VARCHAR(255) NOT NULL,
+    text_data VARCHAR(255) NOT NULL,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id)
+);
+
+
+CREATE TABLE adminmessage (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    text_data VARCHAR(255) NOT NULL
+   
+);
+

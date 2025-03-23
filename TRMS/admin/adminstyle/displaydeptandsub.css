@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    font-weight: bold;
+}
+
+.wholesection{
+    display: flex;
+    flex-direction: row;
+}
+
+.navigators{
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+}
+
+.mainsection{
+    width: 500px;
+    height: 100%;
+    background: orange;
+    margin-top: 50px;
+    margin-left: 500px;
+    text-align: center;
+}
+
+.navigators{
+ 
+    background-color: rgba(255, 255, 255, 0.979);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100px;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    text-align: center;
+    box-shadow: 5px 10px 50px 12px rgb(2, 2, 7);
+}
+
+.l1,
+.n1,
+.n4{
+    
+  padding: 5px 10px;
+  text-decoration: none;
+  background:transparent;
+  color: rgb(8, 3, 3);
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.n1,
+.n4{
+    
+  padding: 5px 10px;
+  text-decoration: none;
+  background:transparent;
+  color: rgb(8, 3, 3);
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 10px 50px 12px rgb(2, 2, 7);
+}
+
+table{
+    margin-left: 100px;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    margin: 10px;
+}
+
+td form {
+    display: inline;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}

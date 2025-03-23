@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminstyle/passwordreset.css">
+    <title>Password Reset</title>
+</head>
+<body class="rset">
+    <section class="reset">
+        <div class="container">
+            <h1>PASSWORD RESET</h1>
+                <div class="boxofreset">
+                            <div class="form1">
+                                <form action="admindb/reset_process.php" method="post">
+                                    <div class="value"> 
+                                        <label id="lemail" for="lemail">E-MAIL  :</label><input required type="email" name="a_mail" id="email" placeholder="Email Address"><br>
+                                        <label id="lpassword" for="lpassword">PASSWORD  :</label><input required type="password" name="new_pass" id="new_pass" placeholder="New Password"><br>
+                                        <label id="lcpassword" for="lcpassword">CONFORM PASSWORD  :</label><input required type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm New Password"><br>
+                                    </div>
+                                    <input type="submit" value="Reset Password" id="resetbtn">
+                                </form>
+                            </div>
+                            <div class="backtohome">
+                                <a href="adminlogin.html" id="bth"><h3>LOGIN</h3></a>
+                                <a href="../index.html" id="bth"><h3>HOME</h3></a>
+                            </div>
+               </div>            
+        </div>
+    </section>
+</body>
+</html>

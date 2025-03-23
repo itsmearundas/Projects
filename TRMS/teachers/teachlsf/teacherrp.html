@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../teachers/teacherstyle/teacherstyle.css">
+    <title>Reset Password</title>
+</head>
+<body>
+    <section class="reset-password">
+        <div class="container">
+            <h1>Reset Password</h1>
+          
+            <div class="form1">
+                <form action="teacherdb/treset_process.php" method="post">
+                    <input type="email" name="t_mail" id="email" placeholder="E-MAIL">
+                    <input type="password" name="new_pass" id="new_pass" placeholder="New Password">
+                    <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm Password">
+                    <input type="submit" value="Reset Password" name="resetPassword" id="resetPassword">
+                </form>      
+            </div>
+            <div class="backtohomeforl">
+                <a href="../index.html" id="bth">HOME</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
